@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TrackBacker</title>
-    <link rel="stylesheet" href="css/styles.css">
+	<title>Maze Solver/Generator</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	</style>
 </head>
 <body>
-    <div class="navbar">
-        <div class="navbar-title">TrackBacker</div>
-        <div class="button-container">
-            <a href="src/N_Queen/index.html">N-Queen Solver</a>
-            <a href="src/Maze/index.html">Maze Solver</a>
-            <a href="src/Sudoku/index.html">Sudoku Slver</a>
-        </div>
-    </div>
-
-    <div class="button-container">
-        <a href="src/N_Queen/index.html">N-Queen Solver</a>
-        <a href="src/Maze/index.html">Maze Solver</a>
-        <a href="src/Sudoku/index.html">Sudoku Slver</a>
-    </div>
-
+	<div class="container">
+		<canvas></canvas>
+		<br>
+		<div>
+			<button id="generate">Generate Maze Of Size: </button>
+			<input id="size" type="text" value="10"/>
+			<button id="solve">Solve maze with bfs</button>
+			<button id="clear">Clear solution</button>
+		</div>
+	</div>
+	<script src="app.js"></script>
 </body>
 </html>
